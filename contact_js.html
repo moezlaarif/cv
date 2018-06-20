@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="contact.js"></script>
+</head>
+<body>
+<h1 ALIGN=“CENTER”>Contact</h1>
+<br>
+Informations génerales:
+<br>
+<form>
+Nom:
+<br>
+<input type="text" id="nom" Name="Nom" size="30" maxlength="40" >
+<br><br>
+Prenom:
+<br>
+<input type="text" id="prenom" Name="Prenom" size="30" maxlength="40" >
+<br><br>
+Civilité:
+<br>
+<input type="radio" id="mr" name="boutonradio" value="mr">Mr <br>
+<input type="radio" id="mme" name="boutonradio" value="mme">Mme <br>
+<input type="radio" id="mlle" name="boutonradio" value="mlle">Mlle <br>
+<input type="radio" id="autre" name="boutonradio" value="autre">Autre <br>
+<br><br>
+E-mail:
+<input type="email" id="email" name="email"  pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+.fr">
+
+<br><br>
+Telephone:
+<input type="number" id="tel" name="usrtel"
+placeholder="(+216) 55555555"  pattern=".{10,14}">
+<br><br>
+Date d'arrivée :
+<input type="datetime-local"
+id="datearr" name="datearr">
+Date de sortie :
+<input type="datetime-local"
+id="datesor" name="datesor">
+<br>
+<br>
+Message:
+<br>
+<textarea id="message" name="avis" rows="3" cols="25"></textarea>
+<br><br>
+<button type="submit"  onclick = "validate();">Envoyer</button>
+</form>
+</body>
+</html>

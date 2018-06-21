@@ -1,51 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<script type="text/javascript" src="contact.js"></script>
-</head>
-<body>
-<h1 ALIGN=“CENTER”>Contact</h1>
-<br>
-Informations génerales:
-<br>
-<form>
-Nom:
-<br>
-<input type="text" id="nom" Name="Nom" size="30" maxlength="40" >
-<br><br>
-Prenom:
-<br>
-<input type="text" id="prenom" Name="Prenom" size="30" maxlength="40" >
-<br><br>
-Civilité:
-<br>
-<input type="radio" id="mr" name="boutonradio" value="mr">Mr <br>
-<input type="radio" id="mme" name="boutonradio" value="mme">Mme <br>
-<input type="radio" id="mlle" name="boutonradio" value="mlle">Mlle <br>
-<input type="radio" id="autre" name="boutonradio" value="autre">Autre <br>
-<br><br>
-E-mail:
-<input type="email" id="email" name="email"  pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+.fr">
+	<head>
+		<meta charset="UTF-8">
+		<title>Contact | JS Validate</title>
+		<link href = "toolbar.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="contact.js"></script>
+	</head>
+	<body>
+	<!-- layout -->
+		<nav>
+			<ul class = "toolbar">
+				<li><a href="page_dacceuil.html">Page d'accueil</a></li>
+				<li><a href="contact.html">Contact</a></li> 
+				<li><a href="Agenda.html">Agenda</a></li> 
+				<li><a href="Inscriptionconnexion.html">Inscription+Connexion</a></li>
+			</ul>
+		</nav>
+		<h1 ALIGN="CENTER">Contact</h1>
+		
+		<p>
+		Informations génerales:
+		</p>
+		
+		<form name="formulaire" onsubmit="return validate();" method="POST">
+			<div>
+				<label for="nom">Nom: </label>
+				<br>
+				<input type="text" id="nom" name="Nom" size="30" maxlength="40" >
+				<br><br>
+			</div>
+				<label for="prenom">Prenom:</label>
+				<br>
+					<input type="text" id="prenom" Name="Prenom" size="30" maxlength="40" >
+				<br><br>
+				Civilité:
+				<br>
+					<input type="radio" id="mr" name="boutonradio" value="mr"> <label for="mr">Mr</label> <br>
+					<input type="radio" id="mme" name="boutonradio" value="mme"><label for="mme">Mme</label> <br>
+					<input type="radio" id="mlle" name="boutonradio" value="mlle"><label for="mlle">Mlle</label> <br>
+					<input type="radio" id="autre" name="boutonradio" value="autre"><label for="autre">Autre </label><br>
+				<br><br>
+				<label for="email">E-mail:</label>
+					<input type="email" id="email" name="email"  pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+.fr">
 
-<br><br>
-Telephone:
-<input type="number" id="tel" name="usrtel"
-placeholder="(+216) 55555555"  pattern=".{10,14}">
-<br><br>
-Date d'arrivée :
-<input type="datetime-local"
-id="datearr" name="datearr">
-Date de sortie :
-<input type="datetime-local"
-id="datesor" name="datesor">
-<br>
-<br>
-Message:
-<br>
-<textarea id="message" name="avis" rows="3" cols="25"></textarea>
-<br><br>
-<button type="submit"  onclick = "validate();">Envoyer</button>
-</form>
-</body>
+				<br><br>
+				<label for="tel">Telephone:</label>
+					<input type="number" id="tel" name="usrtel"
+					placeholder="(+216) 55555555"  pattern=".{10,14}">
+				<br><br>
+				<label for="datearr">Date d'arrivée :</label>
+					<input type="datetime-local"
+					id="datearr" name="datearr">
+				<label for="datesor">Date de sortie :</label>
+					<input type="datetime-local"
+					id="datesor" name="datesor">
+				<br><br>
+				<label for="message">Message:</label>
+				<br>
+					<textarea id="message" name="avis" rows="3" cols="25"></textarea>
+				<br><br>
+				<button type="submit" >Envoyer</button>
+		</form>
+		<!-- layout -->
+		<footer>
+			<p>
+			Dream Tek Consulting
+
+			Adresse : Carthago Immeuble Luxor 1, B3.1 3ème étage 1002, Monplaisir
+			</p>
+		</footer>
+	</body>
 </html>
